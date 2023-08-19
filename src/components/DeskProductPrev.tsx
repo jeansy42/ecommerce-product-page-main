@@ -18,7 +18,12 @@ function DeskProductPrev() {
           />
         </div>
         <div className="relative flex flex-col gap-5">
-          <PresentationMobile d="96" t={"translate-x-9"} aditionalCLass="" />
+          <PresentationMobile
+            d="96"
+            t={"translate-x-9"}
+            y={"-translate-x-9"}
+            aditionalCLass=""
+          />
           <SelectImgDesk pad="px-6" />
         </div>
       </div>

@@ -14,17 +14,19 @@ function PresentationMobile({
   aditionalCLass,
   d,
   t,
+  y,
 }: {
   aditionalCLass: string;
   d: string;
   t: string;
+  y: string;
 }) {
   const { counter, setCounter, imageRef } = useGlobalContext() as ContextType;
   return (
     <>
       <img
         ref={imageRef}
-        className={`max-h-[320px] w-full object-cover object-top sm:w-${d} sm:min-w-[320px] sm:h-${d} sm:max-h-none sm:rounded-xl`}
+        className={`max-h-[320px] w-full object-cover object-top sm:w-${d} sm:min-w-[320px] sm:h-${d} sm:max-h-[400px] sm:rounded-xl`}
         src={ArrayImg[counter]}
         alt={`img${counter}`}
       />
@@ -32,7 +34,7 @@ function PresentationMobile({
         className={`w-full px-4 flex justify-between absolute top-1/2 transform -translate-y-1/2 ${aditionalCLass}`}
       >
         <span
-          className={`h-10 w-10  border-2 border-cus_P_Org flex items-center justify-center bg-white rounded-full group cursor-pointer transform -${t}`}
+          className={`h-10 w-10  border-2 border-cus_P_Org flex items-center justify-center bg-white rounded-full group cursor-pointer transform ${y}`}
           onClick={() =>
             setCounter((p) => {
               if (p === 0) return ArrayImg.length - 1;
